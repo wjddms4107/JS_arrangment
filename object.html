@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>object</title>
+</head>
+<body>
+
+  <section>
+    <table>
+      <tr>
+        <td id="title"></td>
+        <td id="price"></td>
+        <td id="stock"></td>
+      </tr>
+    </table>
+  </section>
+
+<script>
+/* 
+객체란?
+여러 프로퍼티를 가지고 있는 데이터의 집합
+*/
+let jsbook = {title:'자바스크립트 입문', price:2500, stock:3};
+
+document.getElementById('title').textContent = jsbook.title;
+document.getElementById('price').textContent = jsbook.price + '원';
+document.getElementById('stock').textContent = jsbook.stock;
+
+</script> 
+</body>
+</html>

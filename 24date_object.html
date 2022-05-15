@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date_Object</title>
+</head>
+<body>
+  <p>최종 접속 일시: <span id=time></span></p>
+
+<script>
+/*
+new는 객체를 초기화하기 위한 키워드이다.
+Date객체를 포함한 몇몇 객체는 new를 사용해서 초기화한 후 사용해야한다.
+*/
+
+/*
+주의해야할 것은 getMonth 메서드!
+1월이면 '0', 2월이면 '1', 3월이면 '2' ....
+그래서 숫자 1을 더해야한다.
+*/
+
+let now = new Date();
+let year = now.getFullYear();
+let month = now.getMonth();
+let date = now.getDate();
+let hour = now.getHours();
+let min = now.getMinutes();
+
+let output = year + '/' + (month + 1) + '/' + date + ' ' + hour + ':' + min;
+document.getElementById('time').textContent = output;
+</script>
+</body>
+</html>

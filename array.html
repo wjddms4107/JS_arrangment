@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>array</title>
+</head>
+<body>
+  <h1>해야 할 일 목록</h1>
+  <ul id="list"></ul>
+
+<script>
+let todo = ['오빠랑 등촌샤브 먹기','오빠랑 카페가서 공부하기', '오빠랑 놀이기구 타기', '오빠랑 조개구이 먹기' ];
+todo.push('오빠가 덥고 피곤하데여');
+for (let i = 0; i < todo.length; i++) {
+  let li = document.createElement('li');
+  li.textContent = todo[i];
+  document.getElementById('list').appendChild(li);
+}
+
+/* 가져온 요소에 자식 요소 삽입하기
+가져온 요소.appendChild(삽입하고 싶은 자식 요소) */
+
+</script> 
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AddZero</title>
+</head>
+<body>
+
+<script>
+/*
+num = 자릿수를 맞출 숫자
+digit = 자릿수
+*/
+
+let addZero = function(num, digit) {
+  let numString = String(num);
+  while(numString.length < digit) {
+    numString = '0' + numString;
+  }
+  return numString;
+
+}
+console.log(addZero(2,5));
+</script>
+</body>
+</html>

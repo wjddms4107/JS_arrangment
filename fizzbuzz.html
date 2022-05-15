@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang=ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fizzbuzz</title>
+</head>
+<body>
+<script>
+
+/* 피즈버즈란?
+3의 배수일 때 = 피즈!
+5의 배수일 때 = 버즈!
+3과 5의 배수일 때 = 피즈버즈!
+=> 이제 1부터 30까지늬 숫자를 가지고 피즈버즈 게임을 할 것이다. */
+
+let fizzbuxx = function(num) {
+  if (num % 3 === 0 && num % 5 === 0) {
+    return 'FizzBuzz!';
+  } else if (num % 3 === 0) {
+    return 'Fizz!';
+  } else if (num % 5 === 0) {
+    return 'Buzz!';
+  } else {
+    return num;
+  }
+}
+
+for(let i = 1; i < 31; i++) {
+  console.log(fizzbuxx(i));
+}
+
+</script>
+</body>
+</html>
+
+
+
+

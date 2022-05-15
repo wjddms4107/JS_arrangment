@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Addzero_ex</title>
+</head>
+<body>
+
+  <section>
+    <h2>Standards Revival MP3</h2>
+    <div id="list">
+    </div>
+  </section>
+<script>
+
+/*
+num = 자릿수를 맞출 숫자
+digit = 자릿수
+*/
+
+let addZero = function(num, digit) {
+let numString = String(num);
+while(numString.length < digit) {
+  numString = '0' + numString;
+}
+return numString;
+}
+
+let songs = [
+  '랄랄라',
+  '노래제목 정하는 중',
+  '일요일이다',
+  '내일은 월요일',
+  '코딩 열씨미 해야지'
+];
+
+for(let i = 0; i < songs.length; i++) {
+  let paragraph = document.createElement('p');
+  paragraph.textContent = addZero(i + 1, 2) + '. ' + songs[i];
+  document.getElementById('list').appendChild(paragraph);
+}
+
+</script>
+
+
+  
+</body>
+</html>
